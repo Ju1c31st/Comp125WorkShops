@@ -9,7 +9,25 @@ class StockItem {
 	private int quantity;
 	
 	//getter for each instance variable
+	public setUnitPrice (){
+		if(unitPrice < 0){
+			unitPrice = 0;
+		}
+		this.unitPrice = unitPrice;
+	}
+	public setQuantity (){
+		if(quantity < 0){
+			quantity = 0;
+		}
+		this.quantity = quantity;
+	}
 	
+	public getQuantity(){
+		this.unitPrice = unitPrice;
+	}
+	public getUnitPrice(){
+		this.quantity = quantity; 
+	}
 	/*
 	 * setter for each instance variable 
 	 * (validate such that if parameter is 
