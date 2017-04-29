@@ -106,9 +106,12 @@ public class AllInOne {
 		if(arr.length = 0){
 			return check;
 		}
-		for(int i=0; i<arr.length; i++){
-			if(arr[i] > high || arr[i] < low){
-				return check;
+		or(int i=0; i<arr.length; i++){
+			if(arr[i] > high){
+				return check = false;
+			}
+			if(arr[i] < low){
+				return check = false;
 			}
 			check = true;
 		}
@@ -177,6 +180,23 @@ public class AllInOne {
 	 */
 	public static int[] getItemsInRange(int[] arr, int low, int high) {
 		
-		return null; //to be completed
+		if(arr == null)
+			return null;
+		int count = 0;
+		for(int i=0; i < arr.length; i++) {
+			if(arr[i] >= low && arr[i] <= high) {
+				count++;
+			}
+		}
+
+		int[] result = new int[count];
+		int idx = 0;
+		for(int i=0; i < arr.length; i++) {
+			if(arr[i] >= low && arr[i] <= high) {
+				result[idx] = arr[i];
+				idx++;
+			}
+		}
+		return result;
 	}
 }
